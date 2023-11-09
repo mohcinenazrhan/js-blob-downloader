@@ -1,0 +1,27 @@
+{
+  "name": "js-blob-downloader",
+  "version": "1.0.0",
+  "description": "blob file-like downloader for any web-based project",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohcinenazrhan/js-blob-downloader.git"
+  },
+  "keywords": [
+    "pdf",
+    "downloader",
+    "download",
+    "filesystem",
+    "file-download",
+    "blob-download"
+  ],
+  "author": "mohcinenazrhan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohcinenazrhan/js-blob-downloader/issues"
+  },
+  "homepage": "https://github.com/mohcinenazrhan/js-blob-downloader#readme"
+}
