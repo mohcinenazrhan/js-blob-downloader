@@ -10,7 +10,8 @@
     "build:esm": "tsc -p tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "prepack": "npm run build",
-    "test": "jest --config jestconfig.json --watch",
+    "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch",
     "test:coverage": "jest --coverage --config jestconfig.json"
   },
   "repository": {
