@@ -1,46 +1,49 @@
-# file-downloader
+# js-blob-downloader
 
-> File downloader for any web-based project.
-> [![NPM](https://img.shields.io/npm/v/@mohcinenazrhan/file-downloader.svg)](https://www.npmjs.com/package/file-downloader) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+> JS blob downloader for any web-based project.
 
 ## Install
 
 ```bash
-npm install @mohcinenazrhan/file-downloader@1.0.1
+npm install js-blob-downloader
 ```
 
-[See Example](https://github.com/mohcinenazrhan/file-downloader/tree/master/example)
+or 
+
+```bash
+yarn add js-blob-downloader
+```
 
 ## Usage
 
-### `downloadFileDisposition`
+### `downloadBlobDisposition`
 
-This function will donwload the file using the disposition header to get the file name and extension.
+This function will download the BLob using the disposition header to get the file name and extension.
 
-`function downloadFileDisposition(data: Blob, disposition: string, fallbackFileName: string): string;`
+`function downloadBlobDisposition(data: Blob, disposition: string, fallbackFileName: string): string;`
 
 ```javascript
-import downloadFileDisposition from 'file-downloader';
+import downloadBlobDisposition from 'js-blob-downloader';
 
 const disposition = response.request.getResponseHeader('Content-Disposition');
 
 if (disposition) {
-  downloadFileDisposition(response.data, disposition, 'file.pdf');
+  downloadBlobDisposition(response.data, disposition, 'file.pdf');
 } else {
   throw new Error('Content-Disposition header is missing');
 }
 ```
 
-### `downloadFile`
+### `downloadBlob`
 
-This function will donwload the file.
+This function will download the Blob.
 
-`function downloadFile(data: Blob, fileName: string): string;`
+`function downloadBlob(data: Blob, fileName: string): string;`
 
 ```javascript
-import { downloadFile } from 'file-downloader';
+import { downloadBlob } from 'js-blob-downloader';
 
-downloadFile(blob, 'file.pdf');
+downloadBlob(blob, 'file.pdf');
 ```
 
 ## Built with
