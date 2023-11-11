@@ -33,7 +33,6 @@ const responses: Responses = {
  * @param fileName string
  */
 export function downloadBlob(data: Blob, fileName: string): string {
-
   if (fileName.trim() === '') return responses.notFileName;
 
   const blob: Blob = new Blob([data]);

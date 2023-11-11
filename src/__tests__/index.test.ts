@@ -1,7 +1,10 @@
 import downloadBlobDisposition from '../index';
 
 describe('downloadFileDisposition', () => {
-  let anchorMocked: Pick<HTMLAnchorElement, 'innerHTML' | 'href' | 'click' | 'setAttribute'>;
+  let anchorMocked: Pick<
+    HTMLAnchorElement,
+    'innerHTML' | 'href' | 'click' | 'setAttribute'
+  >;
 
   beforeEach(() => {
     anchorMocked = {
@@ -14,7 +17,9 @@ describe('downloadFileDisposition', () => {
     global.URL.createObjectURL = jest.fn(() => '');
     document.body.appendChild = jest.fn();
     document.body.removeChild = jest.fn();
-    jest.spyOn(document, 'createElement').mockImplementation(() => (anchorMocked as any));
+    jest
+      .spyOn(document, 'createElement')
+      .mockImplementation(() => anchorMocked as any);
   });
 
   afterEach(() => {
@@ -27,11 +32,14 @@ describe('downloadFileDisposition', () => {
     const fakeBlob = new Blob(['testing'], {
       type: 'application/pdf',
     });
-    
+
     const res = downloadBlobDisposition(fakeBlob, disposition, 'file.pdf');
-  
+
     expect(global.URL.createObjectURL).toHaveBeenCalledWith(fakeBlob);
-    expect(anchorMocked.setAttribute).toHaveBeenCalledWith('download', fileName);
+    expect(anchorMocked.setAttribute).toHaveBeenCalledWith(
+      'download',
+      fileName,
+    );
     expect(anchorMocked.click).toHaveBeenCalled();
     expect(res).toBe('download');
   });
@@ -43,7 +51,11 @@ describe('downloadFileDisposition', () => {
       type: 'application/pdf',
     });
 
-    const res = downloadBlobDisposition(fakeBlob, disposition, fallbackFileName);
+    const res = downloadBlobDisposition(
+      fakeBlob,
+      disposition,
+      fallbackFileName,
+    );
 
     expect(global.URL.createObjectURL).toHaveBeenCalledWith(fakeBlob);
     expect(anchorMocked.setAttribute).toHaveBeenCalledWith(
@@ -61,7 +73,11 @@ describe('downloadFileDisposition', () => {
       type: 'application/pdf',
     });
 
-    const res = downloadBlobDisposition(fakeBlob, disposition, fallbackFileName);
+    const res = downloadBlobDisposition(
+      fakeBlob,
+      disposition,
+      fallbackFileName,
+    );
 
     expect(global.URL.createObjectURL).not.toHaveBeenCalled();
     expect(anchorMocked.setAttribute).not.toHaveBeenCalled();
