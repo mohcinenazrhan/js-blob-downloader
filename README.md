@@ -8,11 +8,13 @@
 npm install js-blob-downloader
 ```
 
-or 
+or
 
 ```bash
 yarn add js-blob-downloader
 ```
+
+[See Example](https://github.com/mohcinenazrhan/js-blob-downloader/tree/main/example)
 
 ## Usage
 
