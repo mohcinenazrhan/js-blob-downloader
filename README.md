@@ -2,6 +2,12 @@
 
 > JS blob downloader for any web-based project.
 
+<div align="center">
+    <img src="https://badgen.net/npm/v/js-blob-downloader" alt="NPM Version" />
+    <img src="https://badgen.net/bundlephobia/min/js-blob-downloader" alt="min size"/>
+    <img src="https://github.com/mohcinenazrhan/js-blob-downloader/actions/workflows/tests.yml/badge.svg" alt="Build Status" />
+</div>
+
 ## Install
 
 ```bash
