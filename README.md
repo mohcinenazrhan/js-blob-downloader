@@ -2,6 +2,11 @@
 
 > JS blob downloader for any web-based project.
 
+## Overview
+
+The `js-blob-downloader` library simplifies Blob downloads in web-based projects by providing convenient functions for handling different scenarios. Whether you need to download Blobs with or without a Content-Disposition header, this library has you covered.
+
+
 <div align="center">
     <img src="https://badgen.net/npm/v/js-blob-downloader" alt="NPM Version" />
     <img src="https://badgen.net/bundlephobia/min/js-blob-downloader" alt="min size"/>
