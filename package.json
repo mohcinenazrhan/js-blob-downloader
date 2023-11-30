@@ -19,9 +19,13 @@
     "url": "git+https://github.com/mohcinenazrhan/js-blob-downloader.git"
   },
   "keywords": [
-    "pdf",
+    "blob",
+    "web",
+    "js",
+    "ts",
+    "file",
     "downloader",
-    "download",
+    "Download",
     "filesystem",
     "file-download",
     "blob-download"
